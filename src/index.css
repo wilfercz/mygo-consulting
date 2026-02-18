@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Gotham'), local('Gotham-Book');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 500;
+  font-style: normal;
+  src: local('Gotham Medium'), local('Gotham-Medium');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Gotham Bold'), local('Gotham-Bold');
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 186 72% 19%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 193 15% 82%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 193 15% 82%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 14 91% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 193 15% 82%;
+    --input: 193 15% 82%;
+    --ring: 186 72% 19%;
+
+    --radius: 0.25rem;
+
+    /* MYGO Brand tokens */
+    --mygo-teal: 186 72% 19%;
+    --mygo-dark-blue: 209 75% 17%;
+    --mygo-orange: 14 91% 54%;
+    --mygo-light-blue: 193 15% 82%;
+    --mygo-dark: 0 0% 10%;
+    --mygo-white: 0 0% 100%;
+
+    --sidebar-background: 186 72% 19%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 186 72% 19%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 14 91% 54%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 193 15% 82%;
+    --sidebar-ring: 186 72% 19%;
+  }
+
+  .dark {
+    --background: 209 75% 17%;
+    --foreground: 0 0% 100%;
+    --card: 186 72% 19%;
+    --card-foreground: 0 0% 100%;
+    --popover: 209 75% 17%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 186 72% 19%;
+    --secondary: 193 15% 82%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 209 75% 22%;
+    --muted-foreground: 193 15% 82%;
+    --accent: 14 91% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 209 75% 22%;
+    --input: 209 75% 22%;
+    --ring: 14 91% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Gotham', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gotham', 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  .font-accent {
+    font-family: 'Unbounded', sans-serif;
+  }
+}
